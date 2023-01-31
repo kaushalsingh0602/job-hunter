@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const constant=require("../utils/constent")
-
 const companySchema = new mongoose.Schema({
     name:{
         type:String,

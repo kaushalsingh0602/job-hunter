@@ -13,9 +13,23 @@ const jobSchema= new mongoose.Schema({
     jobStatus:{
        type:String,
        required : true,
-       default:constant.jobStatus.avelable 
+       default:constant.jobStatus.avelable   
     },
-    compapantId:{
+    createdAt:{
+        type:Date,
+        immutable:true,
+        default:()=>{
+            return Date.now();
+        }
+    },
+    updatedAt:{
+        type:Date,
+        immutable:true,
+        default:()=>{
+            return Date.now();
+        }
+    },
+    companyId:{
         type:[mongoose.SchemaTypes.ObjectId],
         ref:"jobs"
     },

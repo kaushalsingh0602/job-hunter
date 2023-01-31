@@ -9,6 +9,7 @@ module.exports={
     },
     useType:{
         student:"STUDENT",
-        admin:"ADMIN"
+        admin:"ADMIN",
+        compeny:"COMPENY"
     }
 }
