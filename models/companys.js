@@ -3,20 +3,15 @@ const constant=require("../utils/constent")
 const companySchema = new mongoose.Schema({
     name:{
         type:String,
-        require:true,
-        unique:true
-    },
-    companyId:{
-        type:String,
-        require:true,
-        unique:true
+        require:true
     },
     address:{
-        street:String,
-        city:String,
-        state : String,
-        country: String,
-        pinCode: Number
+        type:String,
+       require:true
+    },
+    userType:{
+        type:String,
+        require:true
     },
     createdAt:{
         type:Date,
@@ -36,10 +31,10 @@ const companySchema = new mongoose.Schema({
         type: String,
         default:constant.status.unverified
     },
-    jobPosted:{
+    jobId:{
         type:[mongoose.SchemaTypes.ObjectId],
         ref:"job"
     }
 
  })
- module.exports= mongoose.model(company,companySchema)
+ module.exports= mongoose.model("company",companySchema)

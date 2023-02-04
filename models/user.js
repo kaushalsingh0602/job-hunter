@@ -1,4 +1,5 @@
 const mongoose=require("mongoose");
+const constant=require("../utils/constent")
 
 const userSchema= new mongoose.Schema({
     name:{
@@ -16,10 +17,10 @@ const userSchema= new mongoose.Schema({
     },
     userType:{
         type:String,
-        require:true  
+        default:constant.userType.student
     },
     password:{
-        type:String,
+        type:String, 
         require:true 
     },
     jobs:{

@@ -1,3 +1,3 @@
-module.exports={
-    secret:"hlo_bhay_all_is wail"
+module.exports = {
+    secret : "You cant see me"
 }

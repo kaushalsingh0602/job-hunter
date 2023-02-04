@@ -7,7 +7,7 @@ module.exports={
         avelable:"AVELABLE",
         expired:"EXPIRED"
     },
-    useType:{
+    userType:{
         student:"STUDENT",
         admin:"ADMIN",
         compeny:"COMPENY"

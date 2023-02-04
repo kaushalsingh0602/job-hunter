@@ -26,11 +26,12 @@ mongoose.connect(dbConfig.DB_URL,async () => {
             userId:"admin1",
             password:bcrypt.hashSync("welcome1",8),
             email:"kaushalsingh8178@gamil.com",
-            userType:constant.useType.admin
+            userType:constant.userType.admin
         })
         console.log(user)
-
     }
+
+    
 
 
    
@@ -45,6 +46,8 @@ mongoose.connect(dbConfig.DB_URL,async () => {
 
 
 require("./routes/auth.route")(app);
+require("./routes/company.route")(app);
+require("./routes/job.route")(app);
 
 
 

@@ -4,7 +4,7 @@ const constant=require("../utils/constent")
 const jobSchema= new mongoose.Schema({
     title:{
         type:String,
-        require:true,
+        require:true
     },
     description:{
         type:String,
@@ -12,7 +12,6 @@ const jobSchema= new mongoose.Schema({
     },
     jobStatus:{
        type:String,
-       required : true,
        default:constant.jobStatus.avelable   
     },
     createdAt:{
@@ -33,7 +32,7 @@ const jobSchema= new mongoose.Schema({
         type:[mongoose.SchemaTypes.ObjectId],
         ref:"jobs"
     },
-    studentId:{
+    students:{
         type:[mongoose.SchemaTypes.ObjectId],
         ref:"user"
     }
